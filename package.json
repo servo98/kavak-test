@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/servo98/kavak-test.git"
   },
-  "author": "",
+  "author": "Fernando Servín Victoria",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/servo98/kavak-test/issues"
@@ -24,7 +24,9 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.11"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
