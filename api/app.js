@@ -2,18 +2,15 @@ import express from 'express';
 
 import {connect} from './utils/database.js';
 
+import userRoutes from './routes/user.js'
+import albumRoutes from './routes/album.js'
+
+connect();
+
 const app = express();
 
-connect()
-    .authenticate()
-    .then(() => {
-        console.log('Connection has been established successfully.');
-    })
-    .catch(err => {
-        console.error('Unable to connect to the database:', err);
-    });
-
 //TODO: all routes
-
+app.use('/album', albumRoutes);
+app.use('/user', userRoutes);
 
 export default app;

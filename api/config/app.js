@@ -11,6 +11,6 @@ export default {
         pass : process.env.DB_PASS,
         user : process.env.DB_USER,
         name : process.env.DB_NAME,
-        driver : process.env.DB_DRIVER
+        driver : process.env.DB_DRIVER,
     }
 }
