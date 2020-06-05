@@ -1,4 +1,4 @@
-//Sequelize errro https://github.com/sequelize/sequelize/issues/12277 
+//Sequelize errror https://github.com/sequelize/sequelize/issues/12277 
 
 
 import { sequelize } from '../utils/database.js';
