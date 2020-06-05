@@ -14,3 +14,6 @@
     cp .env.example .env
 ```
  * `npm run dev` **(Correrá en el puerto 3000 por default)**
+
+ ## POSTMAN
+ Se adjunta el archivo `kavak.postman_collection.json` el cual se puede importar en postman para provar el servicio
