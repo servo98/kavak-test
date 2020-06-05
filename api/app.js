@@ -5,8 +5,7 @@ import albumRoutes from './routes/album.js'
 import trackRoutes from './routes/track.js'
 import countryRoutes from './routes/country.js'
 
-import test from './controllers/test.js';
-
+import exercises from './controllers/excercises.js';
 
 const app = express();
 
@@ -16,6 +15,7 @@ app.use('/users', userRoutes);
 app.use('/tracks', trackRoutes);
 app.use('/countries', countryRoutes);
 
-app.use('/test', test)
+app.use('/exercises/:number', exercises);
+
 
 export default app;
