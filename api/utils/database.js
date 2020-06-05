@@ -13,12 +13,4 @@ const sequelize = new Sequelize(database.name, database.user, database.pass, {
     logging: database.logging
 });
 
-// sequelize.authenticate()
-//     .then(() => {
-//         console.log('Connection has been established successfully.');
-//     })
-//     .catch(err => {
-//         console.error('Unable to connect to the database:', err);
-//     });
-
 export { sequelize };

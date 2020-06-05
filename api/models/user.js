@@ -12,19 +12,19 @@ User.init({
     },
     name: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
     email: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
     countrycode: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
     status: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
     },
 }, {
     sequelize,

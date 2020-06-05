@@ -8,7 +8,6 @@ export async function index(req, res) {
         const albums = await albumService.index({limit, offset, sortBy, orderBy});
         return res.json({albums});
     } catch (error) {
-        console.log(error);
         return res.json({error});
     }
 }

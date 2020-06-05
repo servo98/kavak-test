@@ -4,10 +4,10 @@ import Country from './country.js';
 import Track from './track.js';
 
 Album.belongsTo(User);
-User.hasMany(Album, {foreignKey: 'userid'});
+User.hasMany(Album, {foreignKey: 'userid', onDelete: 'SET NULL'});
 
 Track.belongsTo(User);
-User.hasMany(Track, {foreignKey: 'userid'});
+User.hasMany(Track, {foreignKey: 'userid', onDelete: 'SET NULL'});
 
 Track.belongsTo(Album);
 

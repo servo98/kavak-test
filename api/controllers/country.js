@@ -1,10 +1,40 @@
-import {Country} from '../models/models.js';
+import CountryService from '../services/country.js';
+
+const countryService = new CountryService();
 
 export async function index(req, res) {
-    const countries = await Country.findAll();
-    return res.json(countries);
+    try {
+        const {limit, offset, sortBy, orderBy} = req.query;
+        const countrys = await countryService.index({limit, offset, sortBy, orderBy});
+        return res.json({countrys});
+    } catch (error) {
+        return res.json({error});
+    }
 }
 
-export function create(req, res) {
-    return res.json('create desde album');
+export async function create(req, res) {
+    try {
+        const country = await countryService.create(req.body);
+        return res.json({country});
+    } catch (error) {
+        return res.json({error});
+    }
+}
+
+export async function update(req, res) {
+    try {
+        const country = await countryService.update(req.params.id, req.body);
+            return res.json({country});
+    } catch (error) {
+        return res.json({error});
+    }
+}
+
+export async function destroy(req, res) {
+    try {
+        const country = await countryService.destroy(req.params.id);
+        return res.json({country});
+    } catch (error) {
+        return res.json({error});
+    }
 }
