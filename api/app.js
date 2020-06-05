@@ -1,4 +1,5 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 
 //Import models routes
 import userRoutes from './routes/user.js'
@@ -13,6 +14,12 @@ import ordering from './middlewares/ordering.js';
 import exercises from './controllers/excercises.js';
 
 const app = express();
+
+app.use(bodyParser.urlencoded({
+    extended: true
+  }));
+
+app.use(bodyParser.json());
 
 //TODO: all routes
 app.use('/exercises/:number', exercises);

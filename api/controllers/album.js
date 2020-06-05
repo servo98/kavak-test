@@ -13,14 +13,29 @@ export async function index(req, res) {
     }
 }
 
-export function create(req, res) {
-    return res.json('create desde album');
+export async function create(req, res) {
+    try {
+        const album = await albumService.create(req.body);
+        return res.json({album});
+    } catch (error) {
+        return res.json({error});
+    }
 }
 
-export function update(req, res) {
-
+export async function update(req, res) {
+    try {
+        const album = await albumService.update(req.params.id, req.body);
+            return res.json({album});
+    } catch (error) {
+        return res.json({error});
+    }
 }
 
-export function destroy(req, res) {
-
+export async function destroy(req, res) {
+    try {
+        const album = await albumService.destroy(req.params.id);
+        return res.json({album});
+    } catch (error) {
+        return res.json({error});
+    }
 }

@@ -7,4 +7,8 @@ router.route('/')
     .get(AlbumController.index)
     .post(AlbumController.create);
 
+router.route('/:id')
+    .put(AlbumController.update)
+    .delete(AlbumController.destroy);
+
 export default router;
