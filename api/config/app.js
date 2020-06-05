@@ -12,6 +12,7 @@ export default {
         user : process.env.DB_USER || 'root',
         name : process.env.DB_NAME || 'bquate_test_musica',
         driver : process.env.DB_DRIVER || 'mysql',
-        loggin : process.env.DB_LOGGIN || true
+        loggin : process.env.DB_LOGGIN || true,
+        exerciseView: process.env.DB_EXERCISE_VIEW || 'tracks_full_data',
     }
 }

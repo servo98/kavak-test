@@ -5,6 +5,9 @@ import { sequelize } from '../utils/database.js';
 export default class {
 
     constructor(model) {
+        if(!model){
+            return null;
+        }
         this.model = model;
     }
 

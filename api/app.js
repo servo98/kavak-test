@@ -6,6 +6,7 @@ import userRoutes from './routes/user.js'
 import albumRoutes from './routes/album.js'
 import trackRoutes from './routes/track.js'
 import countryRoutes from './routes/country.js'
+import viewRoutes from './routes/view.js';
 
 
 import exercises from './controllers/excercises.js';
@@ -25,6 +26,7 @@ app.use('/albums', albumRoutes);
 app.use('/users', userRoutes);
 app.use('/tracks', trackRoutes);
 app.use('/countries', countryRoutes);
+app.use('/view', viewRoutes);
 
 
 
