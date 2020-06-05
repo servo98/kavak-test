@@ -1,42 +1,48 @@
 export function exercise1() {
-    return `CREATE OR REPLACE VIEW TRACKS_FULL_DATA AS SELECT
-    t.id AS track_id,
-    t.title AS track_title,
-    a.title AS album_title,
-    u.email AS user_mail,
-    c.name AS country_name
-    FROM
-        tracks AS t,
-        users AS u,
-        country AS c,
-        albums AS a 
-    WHERE  
-        t.albumid = a.id
-        AND t.userid = u.id
-        AND u.countrycode = c.code`;
+    return [
+        `CREATE OR REPLACE VIEW TRACKS_FULL_DATA AS SELECT
+            t.id AS track_id,
+            t.title AS track_title,
+            a.title AS album_title,
+            u.email AS user_mail,
+            c.name AS country_name
+        FROM
+            tracks AS t,
+            users AS u,
+            country AS c,
+            albums AS a 
+        WHERE  
+            t.albumid = a.id
+            AND t.userid = u.id
+            AND u.countrycode = c.code`
+    ];
 }
 export function exercise2() {
-    return `SELECT
-                a.title
-            FROM 
-                albums AS a,
-                users AS u,
-                country AS c 
-            WHERE 
-                a.genre = 'ROCK' 
-                AND a.userid = u.id
-                AND u.countrycode = c.code
-                AND c.name = 'PERU'`;
+    return [
+        `SELECT
+            a.title
+        FROM 
+            albums AS a,
+            users AS u,
+            country AS c 
+        WHERE 
+            a.genre = 'ROCK' 
+            AND a.userid = u.id
+            AND u.countrycode = c.code
+            AND c.name = 'PERU'`
+    ];
 }
 export function exercise3() {
-    return `UPDATE
-                tracks t,
-                users u
-            SET
-                t.artist = u.name
-            WHERE
-                t.artist IS NULL
-                AND t.userid = u.id`;
+    return [
+        `UPDATE
+            tracks t,
+            users u
+        SET
+            t.artist = u.name
+        WHERE
+            t.artist IS NULL
+            AND t.userid = u.id`
+];
 }
 export function exercise4() {
     return [
@@ -86,18 +92,16 @@ export function exercise5() {
                 t.userid = u.id
                 AND a.userid = u.id
         )`
-    ]
-  
-    ;
+    ];
 }
 export function exercise6() {
-    return `
-        SELECT 
+    return [
+        `SELECT 
             t.*
         FROM
             tracks as t,
             albums as a
         WHERE
-            t.genre <> a.genre
-    `;
+            t.genre <> a.genre`
+    ];
 }
