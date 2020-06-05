@@ -1,0 +1,559 @@
+{
+	"info": {
+		"_postman_id": "bf0e1a86-9eca-4aed-8e64-e0938d4bcc80",
+		"name": "kavak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "exercises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/exercises/5",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"exercises",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "albums.index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/albums?sortBy=id&orderBy=desc&limit=2&offset=0",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"albums"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "orderBy",
+							"value": "desc"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countries.index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/countries?sortBy=id&orderBy=desc&limit=100&offset=0",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "orderBy",
+							"value": "desc"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tracks.index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/tracks?sortBy=id&orderBy=desc&limit=2&offset=0",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"tracks"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "orderBy",
+							"value": "desc"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users.index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/users?sortBy=id&orderBy=desc&limit=2&offset=0",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "orderBy",
+							"value": "desc"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view.index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/view?sortBy=track_id&orderBy=desc&limit=2&offset=0",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"view"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "track_id"
+						},
+						{
+							"key": "orderBy",
+							"value": "desc"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "albums.create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{api}}/albums",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"albums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countries.create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{api}}/countries",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tracks.create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{api}}/tracks",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users.create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "fernando",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "fernandonando@live.com.mx",
+							"type": "text"
+						},
+						{
+							"key": "countrycode",
+							"value": "AR",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{api}}/users",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "albums.update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "titulo nuevo",
+							"type": "text"
+						},
+						{
+							"key": "artist",
+							"value": "donguapetó",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/albums/20841",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"albums",
+						"20841"
+					],
+					"query": [
+						{
+							"key": "titile",
+							"value": "titulo nuevo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countries.update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "titulo nuevo",
+							"type": "text"
+						},
+						{
+							"key": "artist",
+							"value": "donguapetó",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/countries/20841",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"countries",
+						"20841"
+					],
+					"query": [
+						{
+							"key": "titile",
+							"value": "titulo nuevo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tracks.update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "titulo nuevo",
+							"type": "text"
+						},
+						{
+							"key": "artist",
+							"value": "donguapetó",
+							"type": "text"
+						},
+						{
+							"key": "albumid",
+							"value": "20843",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/tracks/79?albumid=20843",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"tracks",
+						"79"
+					],
+					"query": [
+						{
+							"key": "albumid",
+							"value": "20843"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "useres.update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Fernando Chido",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/users/196",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"users",
+						"196"
+					],
+					"query": [
+						{
+							"key": "titile",
+							"value": "titulo nuevo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "albums.delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/albums/20843",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"albums",
+						"20843"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countries.delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/countries/4",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"countries",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tracks.delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/tracks/79",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"tracks",
+						"79"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users.delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/users/196",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"users",
+						"196"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
