@@ -1,13 +1,12 @@
 export default function(req, res, next) {
-    const {sortBy, orderBy} = req.params;
-    if(sortBy && orderBy){
-        if( !isValidateOrderingParams(sortBy, orderBy)) {
-            return res.json({error: 'Invalid ordeginr parameters'})
-        }
+    const {sortBy, orderBy} = req.query;
+    if(sortBy && orderBy && !isValidateOrderingParams(sortBy, orderBy)){
+        return res.json({error: 'Invalid ordeginr parameters'})
     }
+
     next();
 }
 
 function isValidateOrderingParams(sortBy, orderBy){
-    return (orderBy == 'asc' || orderBy == 'desc') && sortBy;
+    return (orderBy.toUpperCase() == 'ASC' || orderBy.toUpperCase() == 'DESC') && sortBy != undefined;
 }

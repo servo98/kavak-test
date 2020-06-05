@@ -10,6 +10,7 @@ const sequelize = new Sequelize(database.name, database.user, database.pass, {
     define: {
         timestamps: database.timestamps
     },
+    logging: true
 });
 
 // sequelize.authenticate()
