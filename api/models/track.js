@@ -1,8 +1,8 @@
 import Sequelize from 'sequelize';
 
-import {sequelize} from '../utils/database.js';
+import { sequelize } from '../utils/database.js';
 
-export default class Track extends Sequelize.Model {}
+export default class Track extends Sequelize.Model { }
 Track.init({
     id: {
         type: Sequelize.INTEGER,
@@ -36,14 +36,19 @@ Track.init({
     },
     userid: {
         type: Sequelize.INTEGER,
-        allowNull: true
+        allowNull: true,
+        references: {
+            model: 'User',
+            key: 'id'
+        }
     },
     status: {
         type: Sequelize.INTEGER,
         allowNull: true
     },
 }, {
-  sequelize,
-  modelName: 'Track',
-  tableName: 'tracks'
+    sequelize,
+    modelName: 'Track',
+    tableName: 'tracks',
+    timestamps: false
 });

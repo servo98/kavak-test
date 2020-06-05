@@ -1,8 +1,8 @@
 import Sequelize from 'sequelize';
 
-import {sequelize} from '../utils/database.js';
+import { sequelize } from '../utils/database.js';
 
-export default class User extends Sequelize.Model {}
+export default class User extends Sequelize.Model { }
 User.init({
     id: {
         type: Sequelize.INTEGER,
@@ -27,8 +27,8 @@ User.init({
         allowNull: false
     },
 }, {
-  sequelize,
-  modelName: 'User',
-  tableName: 'users',
-  timestamps: false
+    sequelize,
+    modelName: 'User',
+    tableName: 'users',
+    timestamps: false
 });

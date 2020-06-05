@@ -1,8 +1,8 @@
 import Sequelize from 'sequelize';
 
-import {sequelize} from '../utils/database.js';
+import { sequelize } from '../utils/database.js';
 
-export default class Country extends Sequelize.Model {}
+export default class Country extends Sequelize.Model { }
 Country.init({
     id: {
         type: Sequelize.INTEGER,
@@ -19,7 +19,8 @@ Country.init({
         allowNull: true
     }
 }, {
-  sequelize,
-  modelName: 'Country',
-  tableName: 'country'
+    sequelize,
+    modelName: 'Country',
+    tableName: 'country',
+    timestamps: false
 });

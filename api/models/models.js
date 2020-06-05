@@ -5,6 +5,10 @@ import Track from './track.js';
 
 Album.belongsTo(User);
 User.hasMany(Album, {foreignKey: 'userid'});
+
+Track.belongsTo(User);
+User.hasMany(Track, {foreignKey: 'userid'});
+
 Track.belongsTo(Album);
 
 export {Album, User, Country, Track}
